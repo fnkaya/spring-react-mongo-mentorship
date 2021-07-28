@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13.3
+    container_name: mentorship-db
+    restart: always
+    environment:
+      POSTGRES_DB: mentorship
+      POSTGRES_USER: fnkaya
+      POSTGRES_PASSWORD: obss
+    ports:
+      - '5432:5432'
+
+  redis:
+    image: redis:6.2.4
+    container_name: redis
+    restart: always
+    ports:
+      - '6379:6379'

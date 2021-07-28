@@ -1,0 +1,16 @@
+server:
+  port: 9000
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mentorship
+    username: fnkaya
+    password: obss
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  ldap:
+    embedded:
+      port: 8389
+      ldif: classpath:ldap-data.ldif
+      base-dn: dc=mentorship,dc=com
