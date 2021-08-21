@@ -34,55 +34,180 @@ objectclass: top
 objectclass: organizationalUnit
 ou: otherpeople
 
-dn: uid=fnkaya,ou=people,dc=mentorship,dc=com
-objectclass: top
-objectclass: person
-objectclass: organizationalPerson
-objectclass: inetOrgPerson
-cn: Furkan Kaya
-sn: Kaya
-uid: fnkaya
-userPassword: $2y$12$UmUhY6wesfdX6Kwvxdx8fOB0f5/AFIeoWqm7gyVbAPASiOwunDZFO
-
 dn: uid=akkaya,ou=people,dc=mentorship,dc=com
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-cn: Ahmet Kerem Kaya
+cn: Ahmet Kerem
 sn: Kaya
 uid: akkaya
-userPassword: $2y$12$PoLyIVO8DmKOKn3WxKTp.ufpZ35by.0VA/4viTUzHiU9Q.KaPYtmy
+userPassword: $2a$12$BrwOO/xQc03vdSqcTaLd3un0Xs16hIqPl1y94Wumjd0U1g5rOj5Ym
 
-dn: uid=mlk2aya,ou=people,dc=mentorship,dc=com
+dn: uid=mlkkaya,ou=people,dc=mentorship,dc=com
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-cn: Melek Kaya
+cn: Melek
 sn: Kaya
-uid: mlk2aya
-userPassword: $2y$12$Yej8i2lejZ3oBarAflX.Nu7uuQtDGpdqEhEgegPEgdsfzdDXV22S6
+uid: mlkkaya
+userPassword: $2a$12$E5.kGvRRhfd4vrpacqJ7K.D6oAVZUhS2mbNJzOkPKpcHOx0ZjnBpK
+
+dn: uid=mskaya,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Muhammed Said
+sn: Kaya
+uid: mskaya
+userPassword: $2a$12$eWsEVNViUFC2BkZic5CRoe/bf9C4UYgKTuIBbefggdFwVqp8n.XW6
+
+dn: uid=ykaya,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Yüksek
+sn: Kaya
+uid: ykaya
+userPassword: $2a$12$sHNLlIv.k4mN.6EldhGhKec0EOdtSjw91Pqa1LviZ5qdpEdnP6fay
+
+dn: uid=nozel,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Nurcan
+sn: Özel
+uid: nozel
+userPassword: $2a$12$Eq8RzWLSEqPU1HGF6mMxJ.XXaYlkvKQ2h9NIHibi9mu7kFUsqV5ZC
+
+dn: uid=dakar,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Dilek
+sn: Akar
+uid: dakar
+userPassword: $2a$12$fhpS6H38xb/RFdAhj5JD0.mwlAIkbwYoSI6qrMFmezUhtT6SVI65y
+
+dn: uid=ysfkaya,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Yusuf
+sn: Kaya
+uid: ysfkaya
+userPassword: $2a$12$6rAbeGYvNCdgaNCD3SSV9ur0MV7n8vzOeFOeTxlkgPSCBaV5gMImW
+
+dn: uid=rcx,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Recep
+sn: Demirci
+uid: rcx
+userPassword: $2a$12$qIzWkqEXmckphhyy3RF5/ewBFqxYwizHnSviiKLk9lyLw7/yqSPo6
+
+dn: uid=sisbilir,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Sevim
+sn: İşbilir
+uid: sisbilir
+userPassword: $2a$12$sPF5uM6FciVBa91WCqPqluIgih6zGRJbn2xmxZVDFxpNekyQPZaJW
+
+dn: uid=mbayhan,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Merve
+sn: Bayhan
+uid: mbayhan
+userPassword: $2a$12$QP4JcBL2q.VhDbz8LvHJ8uJqSOagCmoRivGl9cRWLatVvwjCyIZxa
+
+dn: uid=acanli,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Ali
+sn: Canlı
+uid: acanli
+userPassword: $2a$12$fmj73FlBQUih6/B1zcsb8u0AVfbhVcAkyeMQw76B0J8.ZqMdF6CYG
+
+dn: uid=ican,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: İlhami
+sn: Can
+uid: ican
+userPassword: $2a$12$4Ps17UhjYd6p/gsW1u/7.e2JkyYPY.gsTcg7WZqGTPebdGuzrBiU.
+
+dn: uid=test-user,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Test User
+sn: User
+uid: test-user
+userPassword: $2a$12$0C/9i0N5yTBAjohjkQmda.gFmFbgsSIyhknjBm45xZRGpNDsTpRqm
+
+dn: uid=test-mentor,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Test Mentor
+sn: Mentor
+uid: test-mentor
+userPassword: $2a$12$0C/9i0N5yTBAjohjkQmda.gFmFbgsSIyhknjBm45xZRGpNDsTpRqm
+
+dn: uid=test-admin,ou=people,dc=mentorship,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Test Admin
+sn: Admin
+uid: test-admin
+userPassword: $2a$12$0C/9i0N5yTBAjohjkQmda.gFmFbgsSIyhknjBm45xZRGpNDsTpRqm
 
 
-dn: cn=users,ou=groups,dc=mentorship,dc=com
+dn: cn=user,ou=groups,dc=mentorship,dc=com
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: users
+cn: user
 ou: user
-uniqueMember: uid=fnkaya,ou=people,dc=mentorship,dc=com
-uniqueMember: uid=akkaya,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=mlkkaya,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=mskaya,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=ykaya,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=nozel,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=dakar,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=ysfkaya,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=rcx,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=sisbilir,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=mbayhan,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=acanli,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=ican,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=test-user,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=test-mentor,ou=people,dc=mentorship,dc=com
 
 dn: cn=admin,ou=groups,dc=mentorship,dc=com
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: managers
-ou: manager
-uniqueMember: uid=mlk2aya,ou=people,dc=mentorship,dc=com
-
-dn: cn=mentors,ou=subgroups,ou=groups,dc=mentorship,dc=com
-objectclass: top
-objectclass: groupOfUniqueNames
-cn: mentors
-ou: mentor
-uniqueMember: uid=fnkaya,ou=people,dc=mentorship,dc=com
+cn: admin
+ou: admin
+uniqueMember: uid=akkaya,ou=people,dc=mentorship,dc=com
+uniqueMember: uid=test-admin,ou=people,dc=mentorship,dc=com

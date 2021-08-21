@@ -1,23 +1,10 @@
 package com.fnkaya.mentorship.security.service;
 
-import com.fnkaya.mentorship.security.dto.LoginRequestDto;
-import com.fnkaya.mentorship.security.dto.LoginResponseDto;
-import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.ldap.userdetails.LdapUserDetails;
-import org.springframework.stereotype.Service;
+import org.springframework.security.core.userdetails.UserDetails;
 
-import java.security.Principal;
+public interface AuthService {
 
-@Service
-@RequiredArgsConstructor
-public class AuthService {
+    UserDetails loadUserById(String id);
 
-    private final AuthenticationProvider authProvider;
-
-    public LdapUserDetails login() throws AuthenticationException {
-        return (LdapUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    }
+    /*Account authenticate(HttpServletRequest request, AuthRequestDto authRequestDto);*/
 }

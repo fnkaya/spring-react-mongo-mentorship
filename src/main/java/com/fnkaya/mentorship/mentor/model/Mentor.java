@@ -1,38 +1,22 @@
 package com.fnkaya.mentorship.mentor.model;
 
-import com.fnkaya.mentorship.account.model.Account;
-import com.fnkaya.mentorship.category.model.Topic;
+import com.fnkaya.mentorship.security.model.Account;
+import lombok.Builder;
 import lombok.Data;
-
-import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Entity
-@Table(name = "mentors")
-public class Mentor{
+@Builder
+@Document(collection = "mentors")
+public class Mentor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
 
-    @OneToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "account_id")
+    @DBRef
     private Account account;
 
-    @ManyToMany(cascade = CascadeType.MERGE)
-    @JoinTable(
-            name = "mentors_topics",
-            joinColumns = @JoinColumn(name = "mentor_id"),
-            inverseJoinColumns = @JoinColumn(name = "topic_id")
-    )
-    private Set<Topic> topics = new HashSet<>();
-
-    @Column(nullable = false)
-    private String description;
-
     private boolean available;
-
-    private double rating;
 }

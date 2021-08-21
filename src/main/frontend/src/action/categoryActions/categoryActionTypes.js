@@ -1,0 +1,13 @@
+const categoryActionTypes = {
+    FETCH_CATEGORIES: 'app/category/FETCH_CATEGORIES',
+    FETCH_CATEGORIES_SUCCESS: 'app/category/FETCH_CATEGORIES_SUCCESS',
+
+    CREATE_CATEGORY: 'app/category/CREATE_CATEGORY',
+    UPDATE_CATEGORY: 'app/category/UPDATE_CATEGORY',
+    DELETE_CATEGORY: 'app/category/DELETE_CATEGORY',
+
+    CATEGORY_API_CALL_SUCCESS: 'app/category/CATEGORY_API_CALL_SUCCESS',
+    CATEGORY_API_CALL_FAILURE: 'app/category/CATEGORY_API_CALL_FAILURE',
+}
+
+export { categoryActionTypes }

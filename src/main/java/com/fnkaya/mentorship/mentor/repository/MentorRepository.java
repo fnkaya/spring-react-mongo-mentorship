@@ -1,7 +1,11 @@
 package com.fnkaya.mentorship.mentor.repository;
 
 import com.fnkaya.mentorship.mentor.model.Mentor;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface MentorRepository extends JpaRepository<Mentor, Long> {
+import java.util.Optional;
+
+public interface MentorRepository extends MongoRepository<Mentor, String> {
+
+    Optional<Mentor> findByAccountId(String accountId);
 }

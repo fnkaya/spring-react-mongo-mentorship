@@ -1,16 +1,67 @@
 server:
-  port: 9000
+  port: 5000
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/mentorship
-    username: fnkaya
-    password: obss
-  jpa:
-    hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    mongodb:
+      uri: mongodb+srv://fnkaya:tqag17qLYngsMZeX@cluster-mentorship.68ioc.mongodb.net/mentorship?retryWrites=true&w=majority
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 559433053929-7lam633g4k4bj95mm5qb3gtcebico26n.apps.googleusercontent.com
+            client-secret: ${CLIENT_SECRET}
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
   ldap:
     embedded:
       port: 8389
       ldif: classpath:ldap-data.ldif
       base-dn: dc=mentorship,dc=com
+      validation:
+        enabled: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/mentorship
+    username: fnkaya
+    password: obss
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  quartz:
+    job-store-type: jdbc
+    properties:
+      org:
+        quartz:
+          threadPool:
+            threadCount: 5
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_ADDRESS}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+org:
+  quartz:
+    jobStore:
+      driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+        security: DEBUG
+        mail: DEBUG
+      quartz: DEBUG

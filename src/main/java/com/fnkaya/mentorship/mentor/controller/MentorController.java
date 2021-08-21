@@ -1,30 +1,31 @@
 package com.fnkaya.mentorship.mentor.controller;
 
+import com.fnkaya.mentorship.mentor.dto.MentorDto;
+import com.fnkaya.mentorship.mentor.dto.mapper.MentorDtoMapper;
 import com.fnkaya.mentorship.mentor.model.Mentor;
-import com.fnkaya.mentorship.mentor.service.MentorService;
+import com.fnkaya.mentorship.mentor.service.MentorServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("mentors")
+@RequestMapping(value = "api/mentors")
 @RequiredArgsConstructor
 public class MentorController {
 
-    private final MentorService service;
+    private final MentorServiceImpl service;
+    private final MentorDtoMapper mapper;
 
-    @PostMapping
-    public ResponseEntity<Mentor> save(@RequestBody Mentor mentor) {
-        Mentor createdMentor = service.save(mentor);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdMentor);
-    }
-
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping
-    public ResponseEntity<Page<Mentor>> getAll(Pageable pageable) {
+    public ResponseEntity<Page<MentorDto>> getAll(Pageable pageable) {
         Page<Mentor> mentors = service.getAll(pageable);
-        return ResponseEntity.ok(mentors);
+        Page<MentorDto> mentorDtos = mentors.map(mapper::toDto);
+        return ResponseEntity.ok(mentorDtos);
     }
 }
