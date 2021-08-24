@@ -9,6 +9,6 @@ services:
       MYSQL_ROOT_PASSWORD: rootpass
       MYSQL_DATABASE: mentorship
       MYSQL_USER: fnkaya
-      MYSQL_PASSWORD: obss
+      MYSQL_PASSWORD: fnkaya
     ports:
       - '3306:3306'
